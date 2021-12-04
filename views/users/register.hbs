@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body>
+    {{#if message}}
+    <div class="message">{{message}}</div>
+    {{/if}}
+    <h1>Register to Shop</h1>
+    <form action="/auth/register" method="POST">
+        <p>Username</p>
+        <input type="text" name="username" value={{inputData.username}}>
+        <p>Password</p>
+        <input type="password" name="password" value={{inputData.password}}>
+        <p>Repeat</p>
+        <input type="password" name="repeat" value={{inputData.repeat}}>
+        <br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+
+</html>
