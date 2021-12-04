@@ -44,7 +44,10 @@ router.get('/login', (req, res) => {
 });
 
 router.post('/login', passport.authenticate('local'), (req, res) => {
-    req.session.message = "Login successful";
+    req.session.message = {
+			text: "Login successful",
+			type: "success"
+		};
     res.redirect('/');
 });
 

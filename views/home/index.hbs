@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
     {{> head}}
-
     <body>
         {{> nav}}
-        <div class="container">
-            {{#if message}}
-                <div class="message">{{message}}</div>
-            {{/if}}
-            <h1>Welcome to passport demo!</h1>
-            <h3>Welcome, {{username}}</h3>
+        <div id="main" class="container">
+            {{> alert}}
+            <div class="wrapper">
+                <h1>Welcome to passport demo!</h1>
+                <h3>Welcome, {{username}}</h3>
+            </div>
         </div>
-
     </body>
 </html>
